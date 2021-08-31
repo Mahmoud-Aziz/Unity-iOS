@@ -5,6 +5,7 @@
 //  Created by Mahmoud Aziz on 31/08/2021.
 //
 
+
 import Foundation
 import UnityFramework
 
@@ -33,7 +34,7 @@ class UnityFrameworkWrapper: NSObject, UnityFrameworkListener, NativeCallsProtoc
         guard let _framework = frameworkBundle.principalClass?.getInstance() else {
             fatalError("framework could not be initialized")
         }
-
+        
         if _framework.appController() == nil {
             _framework.setExecuteHeader(mhExecHeaderPtr)
         }
@@ -66,7 +67,8 @@ class UnityFrameworkWrapper: NSObject, UnityFrameworkListener, NativeCallsProtoc
         framework.showUnityWindow()
     }
     
-//    func sendMsgToUnity() {
-//    }
+    func sendMsgToUnity() {
+        // framework.sendMessageToGO(withName: "cube", functionName: "change", message: "yellow")
+    }
     
 }
