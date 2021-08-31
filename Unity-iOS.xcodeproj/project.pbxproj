@@ -13,6 +13,7 @@
 		6292B1BC26DE5273004A394F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6292B1BA26DE5273004A394F /* Main.storyboard */; };
 		6292B1BE26DE5275004A394F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6292B1BD26DE5275004A394F /* Assets.xcassets */; };
 		6292B1C126DE5275004A394F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6292B1BF26DE5275004A394F /* LaunchScreen.storyboard */; };
+		6292B1C926DE5466004A394F /* UnityFrameworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6292B1C826DE5465004A394F /* UnityFrameworkWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6292B1BD26DE5275004A394F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6292B1C026DE5275004A394F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6292B1C226DE5275004A394F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6292B1C826DE5465004A394F /* UnityFrameworkWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityFrameworkWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				6292B1B426DE5273004A394F /* AppDelegate.swift */,
 				6292B1B626DE5273004A394F /* SceneDelegate.swift */,
+				6292B1C826DE5465004A394F /* UnityFrameworkWrapper.swift */,
 				6292B1B826DE5273004A394F /* ViewController.swift */,
 				6292B1BA26DE5273004A394F /* Main.storyboard */,
 				6292B1BD26DE5275004A394F /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				6292B1B926DE5273004A394F /* ViewController.swift in Sources */,
 				6292B1B526DE5273004A394F /* AppDelegate.swift in Sources */,
+				6292B1C926DE5466004A394F /* UnityFrameworkWrapper.swift in Sources */,
 				6292B1B726DE5273004A394F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
