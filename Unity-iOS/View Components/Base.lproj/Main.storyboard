@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-957" y="110"/>
         </scene>
-        <!--Unity-iOS-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Unity_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8IO-o0-oZ2">
-                                <rect key="frame" x="0.0" y="149" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="149" width="414" height="664"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="vhf-IU-xn9"/>
                                 <cells>
@@ -71,13 +71,22 @@
                             <constraint firstItem="Wf0-ct-8oK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="cQB-gy-oix"/>
                             <constraint firstItem="8IO-o0-oZ2" firstAttribute="top" secondItem="Wf0-ct-8oK" secondAttribute="bottom" constant="5" id="djg-yB-pEs"/>
                             <constraint firstItem="8IO-o0-oZ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dzO-ua-kBo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8IO-o0-oZ2" secondAttribute="bottom" id="gC8-1V-lI5"/>
+                            <constraint firstItem="7p8-Pt-2Tq" firstAttribute="top" secondItem="8IO-o0-oZ2" secondAttribute="bottom" id="gC8-1V-lI5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8IO-o0-oZ2" secondAttribute="trailing" id="kbz-DO-lbJ"/>
                             <constraint firstItem="Wf0-ct-8oK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="mco-6c-MTw"/>
                             <constraint firstAttribute="bottom" secondItem="7p8-Pt-2Tq" secondAttribute="bottom" id="vzT-j2-Nct"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Unity-iOS" largeTitleDisplayMode="always" id="XtO-Pj-xzB"/>
+                    <navigationItem key="navigationItem" id="XtO-Pj-xzB">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="bca-he-CrY">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CdE-XK-1Nb">
+                                <rect key="frame" x="20" y="0.0" width="21" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="line.horizontal.3" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="8IO-o0-oZ2" id="lWt-Qg-n0w"/>
                         <outlet property="searchBar" destination="Wf0-ct-8oK" id="DfB-65-cVS"/>
@@ -91,6 +100,7 @@
     </scenes>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="sparkles" catalog="system" width="112" height="128"/>
     </resources>

@@ -13,7 +13,6 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tabBar: UITabBar!
     @IBOutlet private weak var collectionView: UICollectionView! {
-        
         didSet {
             collectionView.dataSource = self
             collectionView.register(UINib(nibName: "HeaderView", bundle: nil), forSupplementaryViewOfKind: "header", withReuseIdentifier: "HeaderView")
@@ -21,7 +20,7 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
             collectionView.register(UINib(nibName: "SpecialEventsCell", bundle: nil), forCellWithReuseIdentifier: "SpecialEventsCell")
         }
     }
-    
+    let myButton = UIButton(type: .system)
     var unityView: UIView?
     var titlesForSectionTwo = ["Quiz","Math Clash","2048","Soduko"]
     var titlesForSecThree = ["Hill Racing","Runner No.1","Bike Racing","Maze Up"]
@@ -29,14 +28,22 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
     //MARK:- View Life Cycle
     
     override func viewDidLoad() {
+        
         collectionView.collectionViewLayout = createCompositionalLayout()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Unity", style: .plain, target: self, action: #selector(buttonTapped))
         
         self.navigationItem.rightBarButtonItem?.tintColor = .black
         self.navigationController?.navigationBar.barTintColor = .white
-        
+
         self.tabBar.backgroundColor = .systemBlue
+        
+        let logo = UIImage(named: "logo.png")
+        let imageView = UIImageView(image:logo)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
     }
+    
+   
     
     //MARK:- Helpers:
     
