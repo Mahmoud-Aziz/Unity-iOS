@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UnityFrameworkDeallocator {
     
     @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tabBar: UITabBar!
     @IBOutlet private weak var collectionView: UICollectionView! {
         
         didSet {
@@ -33,6 +34,8 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
         
         self.navigationItem.rightBarButtonItem?.tintColor = .black
         self.navigationController?.navigationBar.barTintColor = .white
+        
+        self.tabBar.backgroundColor = .systemBlue
     }
     
     //MARK:- Helpers:

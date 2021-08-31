@@ -52,10 +52,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7p8-Pt-2Tq">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Explore" image="magnifyingglass" catalog="system" id="Dyz-vy-zE8"/>
+                                    <tabBarItem title="Fantasy" image="sparkles" catalog="system" id="xR8-0H-J5S"/>
+                                    <tabBarItem title="Settings" image="gearshape.fill" catalog="system" id="Jcz-ac-K4K"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7p8-Pt-2Tq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F5d-PW-MWL"/>
+                            <constraint firstItem="7p8-Pt-2Tq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VMW-qy-oF6"/>
                             <constraint firstItem="Wf0-ct-8oK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="ZBH-Q7-FFd"/>
                             <constraint firstItem="Wf0-ct-8oK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="cQB-gy-oix"/>
                             <constraint firstItem="8IO-o0-oZ2" firstAttribute="top" secondItem="Wf0-ct-8oK" secondAttribute="bottom" constant="5" id="djg-yB-pEs"/>
@@ -63,12 +74,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8IO-o0-oZ2" secondAttribute="bottom" id="gC8-1V-lI5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8IO-o0-oZ2" secondAttribute="trailing" id="kbz-DO-lbJ"/>
                             <constraint firstItem="Wf0-ct-8oK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="mco-6c-MTw"/>
+                            <constraint firstAttribute="bottom" secondItem="7p8-Pt-2Tq" secondAttribute="bottom" id="vzT-j2-Nct"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Unity-iOS" largeTitleDisplayMode="always" id="XtO-Pj-xzB"/>
                     <connections>
                         <outlet property="collectionView" destination="8IO-o0-oZ2" id="lWt-Qg-n0w"/>
                         <outlet property="searchBar" destination="Wf0-ct-8oK" id="DfB-65-cVS"/>
+                        <outlet property="tabBar" destination="7p8-Pt-2Tq" id="8ut-NM-5mo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,4 +89,9 @@
             <point key="canvasLocation" x="-323" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="sparkles" catalog="system" width="112" height="128"/>
+    </resources>
 </document>
