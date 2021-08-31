@@ -4,14 +4,13 @@
 //
 //  Created by Mahmoud Aziz on 31/08/2021.
 //
-
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -30,7 +29,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        UnityFrameworkWrapper.shared.framework.appController()?.applicationDidEnterBackground(application)
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        UnityFrameworkWrapper.shared.framework.appController()?.applicationWillResignActive(application)
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        UnityFrameworkWrapper.shared.framework.appController()?.applicationWillEnterForeground(application)
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        UnityFrameworkWrapper.shared.framework.appController()?.applicationWillTerminate(application)
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        UnityFrameworkWrapper.shared.framework.appController()?.applicationDidBecomeActive(application)
+    }
 
 
 }
-
