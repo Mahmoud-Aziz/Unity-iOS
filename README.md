@@ -16,4 +16,12 @@ Unity game integrated in iOS native app using Swift and Xcode.
 
 ## Pods
 
-*Only SideMenu (Installed by Carthage)
+* Only SideMenu (Installed by Carthage)
+
+## Screenshots
+
+![screenshot](https://res.cloudinary.com/dgkreem5e/image/upload/v1630473530/IMG_2129_tajobh.png)
+![screenshot](https://res.cloudinary.com/dgkreem5e/image/upload/v1630473531/IMG_2128_dgjgkf.png)
+![screenshot](https://res.cloudinary.com/dgkreem5e/image/upload/v1630473534/IMG_2130_c5gzsr.png)
+
+
