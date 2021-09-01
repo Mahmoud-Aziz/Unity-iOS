@@ -64,6 +64,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7p8-Pt-2Tq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F5d-PW-MWL"/>
                             <constraint firstItem="7p8-Pt-2Tq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VMW-qy-oF6"/>
@@ -76,14 +77,20 @@
                             <constraint firstItem="Wf0-ct-8oK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="mco-6c-MTw"/>
                             <constraint firstAttribute="bottom" secondItem="7p8-Pt-2Tq" secondAttribute="bottom" id="vzT-j2-Nct"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8GR-j5-s4K" appends="YES" id="XMK-l8-Om6"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="XtO-Pj-xzB">
                         <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="bca-he-CrY">
                             <button key="customView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CdE-XK-1Nb">
-                                <rect key="frame" x="20" y="0.0" width="21" height="22"/>
+                                <rect key="frame" x="20" y="11" width="21" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="line.horizontal.3" catalog="system"/>
+                                <connections>
+                                    <action selector="sideMenuButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="jlS-RR-lzF"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -94,6 +101,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8GR-j5-s4K">
+                    <connections>
+                        <action selector="tapToHideKeyboard:" destination="BYZ-38-t0r" id="Pcs-kq-wVT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-323" y="110"/>
         </scene>

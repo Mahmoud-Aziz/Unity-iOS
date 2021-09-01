@@ -7,6 +7,7 @@
 
 
 import UIKit
+import SideMenu
 
 class HomeViewController: UIViewController, UnityFrameworkDeallocator {
     
@@ -20,8 +21,10 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
             collectionView.register(UINib(nibName: "SpecialEventsCell", bundle: nil), forCellWithReuseIdentifier: "SpecialEventsCell")
         }
     }
-    let myButton = UIButton(type: .system)
+    
     var unityView: UIView?
+    var sideMenu: SideMenuNavigationController?
+    
     var titlesForSectionTwo = ["Quiz","Math Clash","2048","Soduko"]
     var titlesForSecThree = ["Hill Racing","Runner No.1","Bike Racing","Maze Up"]
     
@@ -29,25 +32,27 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
     
     override func viewDidLoad() {
         
+        self.searchBar.delegate = self
         collectionView.collectionViewLayout = createCompositionalLayout()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Unity", style: .plain, target: self, action: #selector(buttonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Start Unity", style: .plain, target: self, action: #selector(UnityButtonTapped))
         
         self.navigationItem.rightBarButtonItem?.tintColor = .black
         self.navigationController?.navigationBar.barTintColor = .white
-
+        
         self.tabBar.backgroundColor = .systemBlue
         
         let logo = UIImage(named: "logo.png")
         let imageView = UIImageView(image:logo)
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
+        
+        self.sideMenu = SideMenuNavigationController(rootViewController: SideMenuController(with: ["Hill Racing","Runner No.1","Bike Racing","Maze Up"]))
+        self.sideMenu?.leftSide = true
     }
-    
-   
     
     //MARK:- Helpers:
     
-    @objc func buttonTapped() {
+    @objc func UnityButtonTapped() {
         UnityFrameworkWrapper.shared.delegate = self
         self.unityView = UnityFrameworkWrapper.shared.framework.appController()!.rootView
         self.view.addSubview(self.unityView!)
@@ -55,6 +60,14 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction private func sideMenuButtonTapped() {
+        present(sideMenu!, animated: true)
+    }
+    
+    @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
+        self.searchBar.resignFirstResponder()
     }
     
     //MARK:- Collection View Compositional Layout Methods:
@@ -269,5 +282,14 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.title = ""
             return cell
         }
+    }
+}
+
+//MARK:- Search bar delegate method:
+
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.resignFirstResponder()
     }
 }
