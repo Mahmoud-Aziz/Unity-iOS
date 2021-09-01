@@ -70,6 +70,12 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
         self.searchBar.resignFirstResponder()
     }
     
+    // MARK: - Unity Framework Deallocator:
+    
+    func exitUnity() {
+        unityView?.removeFromSuperview()
+    }
+    
     //MARK:- Collection View Compositional Layout Methods:
     
     func  createCompositionalLayout() -> UICollectionViewCompositionalLayout {
@@ -203,12 +209,6 @@ class HomeViewController: UIViewController, UnityFrameworkDeallocator {
         section.boundarySupplementaryItems = [header]
         
         return section
-    }
-    
-    // MARK: - Unity Framework Deallocator:
-    
-    func exitUnity() {
-        unityView?.removeFromSuperview()
     }
 }
 

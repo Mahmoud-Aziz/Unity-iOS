@@ -14,3 +14,6 @@ Unity game integrated in iOS native app using Swift and Xcode.
 * Used dummy data (2 arrays of strings) to accomplish the UI. 
 
 
+## Pods
+
+*Only SideMenu (Installed by Carthage)
