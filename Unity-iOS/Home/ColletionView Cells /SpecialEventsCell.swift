@@ -8,14 +8,13 @@
 import UIKit
 
 class SpecialEventsCell: UICollectionViewCell {
-
+    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subTitleLabel: UILabel!
     
     var title: String? {
         didSet {
             titleLabel.text = title
-            
         }
     }
     
@@ -24,5 +23,5 @@ class SpecialEventsCell: UICollectionViewCell {
             subTitleLabel.text = subTitle
         }
     }
-
+    
 }

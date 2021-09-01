@@ -9,15 +9,10 @@ import UIKit
 
 //third,fourth and fifth section custom cell
 class CustomCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet private weak var label:UILabel!
     @IBOutlet private weak var image: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     var title: String? {
         didSet {
             label.text = title

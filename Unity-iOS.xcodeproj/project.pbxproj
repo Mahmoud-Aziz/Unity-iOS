@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				6203A7C226DEC5AF001B10C1 /* Header View */,
-				6203A7C026DEC535001B10C1 /* Home View */,
+				6203A7C026DEC535001B10C1 /* Home Controller */,
 				6203A7BF26DEC4F7001B10C1 /* ColletionView Cells  */,
 			);
 			path = Home;
@@ -98,13 +98,13 @@
 			path = "ColletionView Cells ";
 			sourceTree = "<group>";
 		};
-		6203A7C026DEC535001B10C1 /* Home View */ = {
+		6203A7C026DEC535001B10C1 /* Home Controller */ = {
 			isa = PBXGroup;
 			children = (
 				66ADEE47236B3212000FF4DE /* HomeViewController.swift */,
 				625BA82326DF2B810097FE32 /* SideMenuController.swift */,
 			);
-			path = "Home View";
+			path = "Home Controller";
 			sourceTree = "<group>";
 		};
 		6203A7C126DEC553001B10C1 /* Unity Wrapper */ = {
